@@ -1,0 +1,63 @@
+//ACTIVITY 1
+import java.util.Scanner;
+
+public class UserProfile {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+        
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+        scanner.nextLine(); 
+        
+        System.out.print("Enter your address: ");
+        String address = scanner.nextLine();
+        
+        System.out.print("Enter your weight: ");
+        double weight = scanner.nextDouble();
+        
+        System.out.print("Enter your height: ");
+        double height = scanner.nextDouble();
+        
+        System.out.println("My name is "+name+", I am "+age+" years old. I live at "+address+" and my weight is "+weight+" with a height of "+height+".");
+        scanner.close();
+    }
+}
+
+//ACTIVITY 3
+import java.util.Scanner;
+
+public class DiagnosticActivity {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n = input.nextInt();
+
+        for (int i = 1; i <= 30; i++) {
+            if (i == 7) {
+                continue;            
+            }
+            if (i % 30 == 0) {       
+                System.out.println(i);
+            }
+            if (i == 30) {
+                break;         
+            }
+        }
+        input.close();
+    }
+}
+
+//ACTIVITY 4
+public class Main {
+    public static void main(String[] args) {
+        int countdown = 50;
+
+        while (countdown > 0){
+            System.out.println(countdown);
+            countdown--;
+        }
+    }
+}

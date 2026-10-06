@@ -26,6 +26,71 @@ public class UserProfile {
     }
 }
 
+//ACTIVITY 2
+import java.util.Scanner;
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        char continueChoice;
+
+        // Loop to allow the user to perform multiple calculations
+        do {
+            // Ask the user to enter the value of X and Y
+            System.out.print("Enter value for X: ");
+            double x = scanner.nextDouble();
+
+            System.out.print("Enter value for Y: ");
+            double y = scanner.nextDouble();
+
+            // Ask the user to choose an arithmetic operator
+            System.out.print("Choose an arithmetic operator (+, -, *, /): ");
+            char operator = scanner.next().charAt(0);
+
+            double result = 0;
+            boolean isValid = true;
+
+            // Switch case statement for arithmetic operations
+            switch (operator) {
+                case '+':
+                    result = x + y;
+                    break;
+                case '-':
+                    result = x - y;
+                    break;
+                case '*':
+                    result = x * y;
+                    break;
+                case '/':
+                    if (y != 0) {
+                        result = x / y;
+                    } else {
+                        System.out.println("Error: Division by zero is not allowed.");
+                        isValid = false;
+                    }
+                    break;
+                default:
+                    System.out.println("Error: Invalid operator selected.");
+                    isValid = false;
+                    break;
+            }
+
+            // Display the result if the operation was valid
+            if (isValid) {
+                System.out.println("Result: " + x + " " + operator + " " + y + " = " + result);
+            }
+
+            // Prompt user if they want to run the program again
+            System.out.print("\nDo you want to perform another calculation? (y/n): ");
+            continueChoice = scanner.next().charAt(0);
+            System.out.println();
+
+        } while (continueChoice == 'y' || continueChoice == 'Y');
+
+        System.out.println("Program exited. Thank you!");
+        scanner.close();
+    }
+}
+
 //ACTIVITY 3
 import java.util.Scanner;
 
